@@ -9,12 +9,13 @@ module.exports = (client) => {
         let x = res.toString().trim().split(/ +/g)
         let args = x[0]
         let z = res.toString().trim().split(/ +/g).slice(1)
+        
         client.channels.cache.get(args).send({
             files: [{
-                attachment: createprompt("ups", "Remote Access", z.replace(",", " ")),
+                attachment: createprompt("ups", "Remote Access", z.join("+")),
                 name: "Remote access.png"
             }]
         })
-        console.log(`Successfully sent '${z.replace(",", " ")}' to ${args}`);
+        console.log(`Successfully sent '${z.join(" ")}' to ${args}`);
     })
 }
