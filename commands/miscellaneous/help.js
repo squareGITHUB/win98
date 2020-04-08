@@ -34,7 +34,7 @@ module.exports = {
                 .setAuthor("Windows 98", message.guild.iconURL)
                 .setThumbnail(client.user.displayAvatarURL())
                 .setTimestamp()
-                .setDescription("available commands (prefix = win98):\n`help`, `reload`, `shutdown`, `join`, `leave`")
+                .setDescription("available commands (prefix = win98):\n`help`, `reload`, `shutdown`, `join`, `leave`, `say`")
                 .setFooter("win98", client.user.displayAvatarURL())
             message.channel.send({
                 files: [{
