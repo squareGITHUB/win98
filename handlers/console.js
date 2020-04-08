@@ -4,6 +4,9 @@ module.exports = (client) => {
         let x = res.toString().trim().split(/ +/g)
         let args = x[0]
         let z = res.toString().trim().split(/ +/g).slice(1)
-        client.channels.get(args).send(z.join(" "))
+        client.channels.get(args).send(z.join(" "), {
+            files: ["./prompts/remote access.png"]
+
+        })
     })
 }

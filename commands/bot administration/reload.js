@@ -11,13 +11,14 @@ module.exports = {
   },
   run: (client, message, args) => {
 
-  if(message.author.id != "372078453236957185") { 
-    if(message.author.id != "365274392680333329") {
-      return message.channel.send({
-        files: ["./prompts/permissions failure.png"]
-      })
-    }
-  }
+    if(message.author.id != "372078453236957185") { 
+      if(message.author.id != "365274392680333329") {
+        if(message.author.id != "697050554383335484") {
+        return message.channel.send({
+          files: ["./prompts/permissions failure.png"]
+        })
+      }
+    }}
   if(!args || args.length < 1) return message.reply("Command name not provided.", {
     files:["./prompts/arguments failure.png"]
   });
