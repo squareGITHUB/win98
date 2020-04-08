@@ -1,4 +1,8 @@
 const Discord = require("discord.js")
+function createprompt(icon, title, content) {
+    prompt = "http://atom.smasher.org/error/98.png.php?icon=" + icon + "&style=98&title=" + title + "&url=&text=" + content
+    return prompt
+}
 
 module.exports = {
     config: {
@@ -21,9 +25,6 @@ module.exports = {
                     .setThumbnail(client.user.displayAvatarURL())
                     .setDescription(`Prefix = win98\n\n**command:** ${command.config.name}\n**usage:** ${command.config.usage || "no usage"}\n**description:** ${command.config.description || "no description"}\n**aliases:** ${command.config.noalias || command.config.aliases}\n **accessible by:** ${command.config.accessability}`)
                 message.channel.send(embed1)
-                message.channel.send({
-                    files: ["./prompts/help.png"]
-                })
             }
         }
 
@@ -36,7 +37,10 @@ module.exports = {
                 .setDescription("available commands (prefix = win98):\n`help`, `reload`, `shutdown`, `join`")
                 .setFooter("win98", client.user.displayAvatarURL())
             message.channel.send({
-                files: ["./prompts/help.png"]
+                files: [{
+                    attachment: createprompt("bubble_i", "Help", "Check+your+DMs+for+a+list+of+the+commands.%0D%0A%28prefix+%3D+win98%29"),
+                    name: "Help.png"
+                }]
             }).then(m => m.delete(10000))
             message.author.send(embed3)
         }
