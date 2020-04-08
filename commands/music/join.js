@@ -3,7 +3,7 @@ const YTDL = require('ytdl-core')
 
 function Play(connection, message) {
     var server = message.guild.id
-    server.dispatcher = connection.play(YTDL("https://www.youtube.com/watch?v=XvoVObL4bYY", { filter: "audioonly" }))
+    server.dispatcher = connection.play(YTDL("https://www.youtube.com/watch?v=tajDxBaPBBM", { filter: "audioonly" }))
 }
 
 function createprompt(icon, title, content) {
