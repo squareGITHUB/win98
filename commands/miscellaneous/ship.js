@@ -29,7 +29,7 @@ module.exports = {
         let person1 = args[0];
         let person2 = args[1];
         if (person1 === undefined || person2 === undefined) {
-            message.channel.send({
+            return message.channel.send({
                 files: [{
                     attachment: createprompt("disk_red_lbl", "Error", "Insufficient+arguments+added+to+command."),
                     name: "Arguments failure.png"
