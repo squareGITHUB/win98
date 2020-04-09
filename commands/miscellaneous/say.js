@@ -8,7 +8,7 @@ module.exports = {
         name: "say",
         aliases: ["echo", "talk"],
         usage: "win98 say [argument]",
-        description: "provides information about the developers",
+        description: "sends a message in the channel",
         noalias: "no aliases",
         accessability: "everyone"
     },
@@ -17,7 +17,7 @@ module.exports = {
         message.delete()
         message.channel.send({
             files: [{
-                attachment: createprompt("mail", "Talking", bottomtext),
+                attachment: createprompt("mail", message.author.username, bottomtext),
                 name: "Say.png"
             }]
         })
