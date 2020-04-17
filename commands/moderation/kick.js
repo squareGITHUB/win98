@@ -8,10 +8,10 @@ module.exports = {
     config: {
         name: "kick",
         aliases: ["k", "boot"],
-        usage: "win98 kick [member]",
+        usage: "win98 kick [member] (reason)",
         description: "kicks a user from the server",
         noalias: "no aliases",
-        accessability: "everyone"
+        accessability: "server moderators (kick permissions)"
     },
     run: async (client, message, args) => {
 
@@ -54,7 +54,7 @@ module.exports = {
         try {
             await user.send({
                 files: [{
-                    attachment: createprompt("mail_deleted", "Kicked", "You+have+been+kicked+from+" + message.guild.name + "%0D%0AReason%3A+" + reason + "%0D%0AKicked by%3A+" + message.author.username),
+                    attachment: createprompt("mail_deleted", "Kicked", "You+have+been+kicked+from+" + message.guild.name + "%0D%0AReason%3A+" + reason + "%0D%0AKicked+by%3A+" + message.author.username),
                     name: "Kicked.png"
                 }]
             })
