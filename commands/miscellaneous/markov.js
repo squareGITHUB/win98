@@ -38,7 +38,7 @@ module.exports = {
         }
         return message.channel.send({
             files: [{
-                attachment: createprompt("mail", "Markov+Chain+(" + message.author.username + ")", result),
+                attachment: createprompt("mail", "Markov+Chain", result),
                 name: "Markov.png"
             }]
         })
