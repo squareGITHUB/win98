@@ -1,8 +1,4 @@
 const Discord = require("discord.js")
-function createprompt(icon, title, content) {
-    prompt = "http://atom.smasher.org/error/98.png.php?icon=" + icon + "&style=98&title=" + title + "&url=&text=" + content
-    return prompt
-}
 
 module.exports = {
     config: {
@@ -36,11 +32,11 @@ module.exports = {
             word = newWord;
             if (!word || !markovChain.hasOwnProperty(word)) word = words[Math.floor(Math.random() * words.length)]
         }
-        return message.channel.send({
-            files: [{
-                attachment: createprompt("mail", "Markov+Chain", result),
-                name: "Markov.png"
-            }]
-        })
+        message.delete();
+        let embed = new Discord.MessageEmbed()
+        .setTitle("Markov Chain")
+        .setColor(Math.floor(Math.random() * 16777214) + 1)
+        .setDescription(result)
+        message.channel.send(embed)
     }
 }
