@@ -15,7 +15,7 @@ module.exports = {
   run: async (client, message, args) => {
     if (message.author.id != "372078453236957185") {
       if (message.author.id != "365274392680333329") {
-        if (message.author.id != "697050554383335484") {
+        if (message.author.id != "147765181903011840") {
           return message.channel.send({
             files: [{
               attachment: createprompt("keys", "Error", "Insufficient+permissions."),
