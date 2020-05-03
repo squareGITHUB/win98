@@ -15,7 +15,7 @@ module.exports = {
     run: (client, message, args) => {
         message.channel.send({
             files: [{
-                attachment: createprompt("hwinfo", "Developers", "The+developers+of+Win98+are%3A%0D%0Asquare%231255%2C+speed%231255+and+fionn%234512.%0D%0AThe+Windows+98+prompts+are+created+via+atomsmasher."),
+                attachment: createprompt("hwinfo", "Developers", "The+developers+of+Win98+are%3A%0D%0Asquare%231255%2C+speed%233413+and+fionn%230053.%0D%0AThe+Windows+98+prompts+are+created+via+atomsmasher."),
                 name: "Devs.png"
             }]
         })
